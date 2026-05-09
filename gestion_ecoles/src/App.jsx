@@ -27,9 +27,13 @@ export default function App() {
        
         <Routes>
           {/* Route publique */}
-          {/* <Route path="/login" element={<LoginPage />} /> */}
+          <Route path="/login" element={<LoginPage />} />
 
-           <Route element={<Sidebar />}>
+          
+          {/* Routes protégées */}
+          
+          <Route element={<ProtectedRoute />}>
+             <Route element={<Sidebar />}>
             <Route path="/dashboard" element={<Dashboard />} />
             <Route path="/ecoles" element={<Ecoles />} />
             <Route path='/annees' element={<AnneeAcademiquePage />} />
@@ -44,27 +48,15 @@ export default function App() {
             <Route path='/inscriptions' element={<InscrireEtudiant/>} />
             <Route path='/liste' element={<ListeEtudiants/>} />
             <Route path='/certificats' element={<CertificatInscription/>} />
-
-
-
-  
-          {/* Routes protégées */}
-          
-          {/* <Route element={<ProtectedRoute />}>
             
-            <Route element={<Sidebar />}>
-            <Route path="/dashboard" element={<Dashboard />} />
-            <Route path="/ecoles" element={<Ecoles />} />
-            <Route path='/annees' element={<AnneeAcademiquePage />} />
-
-           </Route> */}
+    
+          </Route>
   
 
         
-          </Route>
+        </Route>
 
           {/* Redirection par défaut */}
-          {/* <Route path="*" element={<Navigate to="/login" replace />} /> */}
           <Route path="*" element={<Navigate to="/dashboard" replace />} />
 
         </Routes>
