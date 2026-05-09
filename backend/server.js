@@ -3,9 +3,9 @@ const cors    = require("cors");
 const app     = express();
 
 // ── Middlewares ───────────────────────────────────────────────────────────────
-// app.use(cors());            // autorise les requêtes depuis React (localhost:5173)
+// app.use(cors());           
 app.use(cors());  
-app.use(express.json());    // parse le corps des requêtes en JSON
+app.use(express.json());  
 
 // ── Routes ────────────────────────────────────────────────────────────────────
 const authRouter = require("./routes/auth");
