@@ -14,22 +14,4 @@ const db = mysql.createPool({
 console.log("Pool MySQL créé avec succès");
 
 module.exports = db;
-// const mysql = require("mysql2");
 
-// // ── Connexion à la base de données MySQL ──────────────────────────────────────
-// const db = mysql.createConnection({
-//     host:     "localhost",
-//     user:     "root",        // ton utilisateur MySQL
-//     password: "",            // ton mot de passe MySQL
-//     database: "gestion_ecoles",
-// });
-
-// db.connect((err) => {
-//     if (err) {
-//         console.error("Erreur de connexion MySQL :", err.message);
-//         return;
-//     }
-//     console.log("Connecté à la base de données MySQL");
-// });
-
-// module.exports = db;
