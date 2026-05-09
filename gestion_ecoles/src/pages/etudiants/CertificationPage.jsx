@@ -1,5 +1,4 @@
-// src/pages/etudiants/CertificatInscription.jsx
-// requires: npm install jspdf
+
 import { useState, useEffect, useRef } from 'react';
 import { toast, Toaster } from 'react-hot-toast';
 import { FileText, Search, Download, Eye, User, X } from 'lucide-react';
